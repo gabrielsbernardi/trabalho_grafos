@@ -7,7 +7,7 @@ package exe6;
 
 /**
  *
- * @author Gabriel Bernardi
+ * @author Flávio Omar Losada e Gabriel da Silva Bernardi
  */
 public class ValidarGrafo {
     private int[][] grafo;
@@ -69,5 +69,14 @@ public class ValidarGrafo {
      */
     public String grausDoVertice(){
         return "";
+    }
+    
+    private void percorrerGrafo(){
+        for (int linha = 0; linha < grafo.length; linha++) {
+            for (int coluna = 0; coluna < grafo.length; coluna++) {
+//                int[] is = grafo[coluna];
+            }
+//            int[] is = grafo[linha];
+        }
     }
 }

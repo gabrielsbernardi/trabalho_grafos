@@ -7,7 +7,7 @@ package exe7;
 
 /**
  *
- * @author Gabriel Bernardi
+ * @author Flávio Omar Losada e Gabriel da Silva Bernardi
  */
 public class Principal {
     public static void main(String[] args) {
