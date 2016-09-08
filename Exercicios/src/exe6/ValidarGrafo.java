@@ -193,7 +193,9 @@ public class ValidarGrafo {
                 }
             }
         }
-        conjunto = conjunto.substring(0, conjunto.length()-2);
+        if (!"".equals(conjunto)) {
+            conjunto = conjunto.substring(0, conjunto.length()-2);
+        }
         if (dirigido){
             return "Quantidade de arestas: " + qtdArestas + "\nConjunto de arestas: E = {" + conjunto + "}";
         }
@@ -218,14 +220,18 @@ public class ValidarGrafo {
             lstGraus.add(qtdGraus);
             qtdGraus = 0;
         }
-        grauVertice = grauVertice.substring(0, grauVertice.length()-2);
+        if (!"".equals(grauVertice)) {
+            grauVertice = grauVertice.substring(0, grauVertice.length()-2);
+        }
         grauVertice += "\nSequência dos graus: ";
         lstGraus.sort(null);
         
         for (Integer lstGrau : lstGraus) {
             grauVertice += lstGrau + ", ";
         }
-        grauVertice = grauVertice.substring(0, grauVertice.length()-2);
+        if (!"".equals(grauVertice)) {
+            grauVertice = grauVertice.substring(0, grauVertice.length()-2);
+        }
         
         return "Grau de cada vértice: " + grauVertice;
     }

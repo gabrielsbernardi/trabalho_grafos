@@ -17,6 +17,10 @@ public class Principal {
     
     public static void main(String[] args) {
         informarArestasPorLinha();
+        ValidarGrafo grafo = new ValidarGrafo();
+        System.out.println(grafo.tipoDoGrafo(matrizAdjacencia) 
+                            + "\n" + grafo.arestasDoGrafo(matrizAdjacencia)
+                            + "\n" + grafo.grausDoVertice(matrizAdjacencia));
     }
 
     private static void informarArestasPorLinha() {
@@ -24,7 +28,6 @@ public class Principal {
         int numLinha = 0;
         Scanner ler = new Scanner(System.in);
         System.out.println("Separe os valores da linha por espaço. Pressione \"Enter\" para cada nova linha da matriz.");
-        System.out.println("Informe @ para parar de digitar.");
         do {
             System.out.print("Linha " + numLinha + ": ");
             valorLinha = ler.nextLine();
@@ -35,10 +38,6 @@ public class Principal {
                 numLinha++;
             }
         } while (maxLinhas > numLinha);
-        ValidarGrafo grafo = new ValidarGrafo();
-        System.out.println(grafo.tipoDoGrafo(matrizAdjacencia) 
-                            + "\n" + grafo.arestasDoGrafo(matrizAdjacencia)
-                            + "\n" + grafo.grausDoVertice(matrizAdjacencia));
     }
     
     private static void processarLinha(String linha, int numLinha){
